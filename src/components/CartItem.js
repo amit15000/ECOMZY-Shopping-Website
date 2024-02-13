@@ -1,7 +1,15 @@
 import React from "react";
 import { MdDeleteForever } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { remove } from "../redux/slices/cartSlice";
+import { toast } from "react-toastify";
 
 function CartItem({ item }) {
+  const dispatch = useDispatch();
+  const removeFromCart = () => {
+    dispatch(remove(item.id));
+    toast.warning("Item removed successfully");
+  };
   return (
     <div>
       <div>
@@ -13,7 +21,7 @@ function CartItem({ item }) {
       </div>
       <div>
         <p>{item.price}</p>
-        <p>
+        <p onClick={removeFromCart}>
           <MdDeleteForever />
         </p>
       </div>

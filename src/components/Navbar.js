@@ -2,7 +2,9 @@ import React from "react";
 import logo from "../assets/logo2.png";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 function Navbar() {
+  const { cart } = useSelector((state) => state);
   return (
     <div className="flex w-full bg-blue-950 p-2">
       <div className="flex justify-between w-full max-w-5xl mx-auto">
@@ -26,6 +28,7 @@ function Navbar() {
             <NavLink to={"/cart"}>
               <FaShoppingCart />
             </NavLink>
+            <p>{cart.length > 0 && <p>{cart.length}</p>}</p>
           </span>
         </div>
       </div>
