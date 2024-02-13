@@ -6,7 +6,7 @@ import Cart from "./pages/Cart";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-slate-900">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

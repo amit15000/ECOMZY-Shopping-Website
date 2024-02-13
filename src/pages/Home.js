@@ -27,7 +27,11 @@ function Home() {
       {loading ? (
         <Spinner />
       ) : cards.length > 0 ? (
-        cards.map((card) => <Product key={card.id} card={card} />)
+        <div className="grid grid-cols-4 max-w-6xl mx-auto space-y-10 space-x-5 min-h-[80vh] ">
+          {cards.map((card) => (
+            <Product key={card.id} card={card} />
+          ))}
+        </div>
       ) : (
         <p>No card found</p>
       )}
