@@ -18,12 +18,12 @@ function Product(props) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-between hover:scale-110 transition duration-300 ease-in hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] ">
       <div>
         <p>{item.title}</p>
       </div>
       <div>
-        <p>{item.description}</p>
+        <p>{item.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
       </div>
       <div>
         <img src={item.image} alt="Product" />

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function Navbar() {
   const { cart } = useSelector((state) => state);
   return (
-    <div className="flex w-full p-2">
+    <div className="flex w-full p-2 bg-slate-900">
       <nav className="flex justify-between w-full max-w-6xl mx-auto">
         <div className="flex gap-x-3">
           <NavLink to={"/"}>
@@ -17,9 +17,11 @@ function Navbar() {
               alt="logo"
             />
           </NavLink>
-          <span className="text-green-500 font-semibold text-lg">ECOMZY</span>
+          <span className="text-green-500 font-semibold text-lg tracking-widest ">
+            ECOMZY
+          </span>
         </div>
-        <div className="flex items-center gap-x-6 text-white text-lg">
+        <div className="flex items-center gap-x-6 text-white text-lg tracking-wider">
           <NavLink to={"/"}>
             <p className="font-amit text-2xl">Home</p>
           </NavLink>
