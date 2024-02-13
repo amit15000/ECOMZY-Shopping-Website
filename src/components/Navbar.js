@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="flex w-full bg-blue-950 p-2">
       <div className="flex justify-between w-full max-w-5xl mx-auto">
-        <div>
+        <div className="flex gap-x-3">
           <NavLink to={"/"}>
             <img
               className="border-2 rounded-full p-2 "
@@ -15,10 +15,11 @@ function Navbar() {
               alt="logo"
             />
           </NavLink>
+          <span className="text-green-500 font-semibold">ECOMZY</span>
         </div>
         <div className="flex items-center gap-x-4 text-white text-lg">
           <NavLink to={"/"}>
-            <p>Home</p>
+            <p className="font-amit">Home</p>
           </NavLink>
 
           <span>
