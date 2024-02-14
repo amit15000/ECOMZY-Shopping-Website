@@ -23,17 +23,21 @@ function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center max-w-6xl mx-auto">
       {loading ? (
-        <Spinner />
+        <div className="flex justify-center items-center h-screen">
+          <Spinner />
+        </div>
       ) : cards.length > 0 ? (
-        <div className="grid grid-cols-4 max-w-6xl mx-auto space-y-10 space-x-5 min-h-[80vh]  ">
+        <div className="grid xs:grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto  space-y-10 space-x-5">
           {cards.map((card) => (
             <Product key={card.id} card={card} />
           ))}
         </div>
       ) : (
-        <p>No card found</p>
+        <div className="flex justify-center items-center h-screen">
+          <p>No card found</p>
+        </div>
       )}
     </div>
   );
