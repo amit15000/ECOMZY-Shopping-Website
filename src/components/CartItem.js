@@ -12,19 +12,25 @@ function CartItem({ item }) {
   };
   return (
     <div>
-      <div>
-        <img src={item.image} alt="Item" />
+      <div className="flex gap-x-14 ">
+        <div className="flex flex-col">
+          <img className="max-w-[150px]" src={item.image} alt="Item" />
+        </div>
+        <div className="flex flex-col max-w-[300px] justify-around ">
+          <h1 className="text-lg font-semibold">{item.title}</h1>
+          <p>{item.description.split(" ").slice(0, 15).join(" ") + "..."}</p>
+          <div className="flex justify-between">
+            <p className="text-green-700 font-bold">${item.price}</p>
+            <p
+              className="text-red-900 bg-red-200 p-2 rounded-full "
+              onClick={removeFromCart}
+            >
+              <MdDeleteForever />
+            </p>
+          </div>
+        </div>
       </div>
-      <div>
-        <h1>{item.title}</h1>
-        <h1>{item.description}</h1>
-      </div>
-      <div>
-        <p>{item.price}</p>
-        <p onClick={removeFromCart}>
-          <MdDeleteForever />
-        </p>
-      </div>
+      <div className="h-[2px] max-w-[510px] bg-black mt-4"></div>
     </div>
   );
 }

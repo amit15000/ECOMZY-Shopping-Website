@@ -17,8 +17,10 @@ function Navbar() {
               alt="logo"
             />
           </NavLink>
-          <span className="text-green-500 font-semibold text-lg tracking-widest ">
-            ECOMZY
+          <span className="text-green-500 font-semibold text-lg tracking-widest">
+            <span className="underline underline-offset-8">ECOMZY</span>
+            <br />
+            <span className="text-white text-xs font-sans">Baby Lo Na</span>
           </span>
         </div>
         <div className="flex items-center gap-x-6 text-white text-lg tracking-wider">
@@ -33,13 +35,11 @@ function Navbar() {
               </NavLink>
             </div>
             <div>
-              <p className="font-semibold">
-                {cart.length > 0 && (
-                  <p className="absolute bg-green-500 animate-bounce text-white text-center align-middle text-sm rounded-full w-5 h-5 left-4 -top-1 ">
-                    {cart.length}
-                  </p>
-                )}
-              </p>
+              {cart.length > 0 && (
+                <div className="absolute bg-green-500 animate-bounce text-white text-center align-middle text-sm rounded-full w-5 h-5 left-4 -top-1">
+                  {cart.length}
+                </div>
+              )}
             </div>
           </div>
         </div>
