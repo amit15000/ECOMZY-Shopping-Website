@@ -18,9 +18,11 @@ function Navbar() {
             />
           </NavLink>
           <span className="text-green-500 font-semibold text-lg tracking-widest">
-            <span className="underline underline-offset-8">ECOMZY</span>
+            <span className="underline underline-offset-8">ShopNest</span>
             <br />
-            <span className="text-white text-xs font-sans">Baby Lo Na</span>
+            <span className="text-white text-xs font-sans">
+              Cozy Shopping, Simplified
+            </span>
           </span>
         </div>
         <div className="flex items-center gap-x-6 text-white text-lg tracking-wider">
